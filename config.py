@@ -1,16 +1,19 @@
+import ignor_file as ignor
+
 db_type = "mssql"
+print_status = 1
 database_settings = {
     'type': 'MSQL',
     'server': '127.0.0.1',
-    'username': 'sa',
-    'password': '82371'
+    'username': ignor.get_username,
+    'password': ignor.get_password
 }
-print_status = 1
+
 settings_novaposhta = {
-    "key": "f711f674afa103c78970c025d46ef8ed",
-    "url": "https://api.novaposhta.ua/v2.0/json/"
+    "key": ignor.get_np_key,
+    "url": ignor.get_np_url
 }
 settings_ukrposhta = {
-    "key": "38dfd023-2571-339b-81da-ef16b13ec736",
-    "url": "https://www.ukrposhta.ua/address-classifier-ws/"
+    "key": ignor.get_up_key,
+    "url": ignor.get_up_url
 }
