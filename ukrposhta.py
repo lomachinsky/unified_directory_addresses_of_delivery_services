@@ -7,6 +7,7 @@ import odbc
 import config
 import ms_sql as mssql
 import time
+import additional as adt
 
 
 def create_body_requests(url, key, method, model, body):
@@ -211,4 +212,4 @@ def acrality_control(connect):
 
 def print_status(time_start, text):
     if config.print_status:
-        print(text + " : " + str(int(time.time() - time_start)))
+        print(text + " : " + adt.calculate_time(time_start))

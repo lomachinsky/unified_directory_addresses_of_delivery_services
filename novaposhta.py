@@ -7,6 +7,7 @@ import odbc
 import config
 import ms_sql as mssql
 import time
+import additional as adt
 
 
 def create_body_requests(url, key, model, method, properties):
@@ -30,12 +31,6 @@ def coll_rest(body_re):
         response = rest.get(url=body_re['url'], params=body_re['params'], json=body_re['json'])
     elif body_re['method'] == "POST":
         response = rest.post(url=body_re['url'], params=body_re['params'], json=body_re['json'])
-    elif body_re['method'] == "PUT":
-        response = rest.put(url=body_re['url'], params=body_re['params'], json=body_re['json'])
-    elif body_re['method'] == "PATCH":
-        response = rest.patch(url=body_re['url'], params=body_re['params'], json=body_re['json'])
-    elif body_re['method'] == "DELETE":
-        response = rest.delete(url=body_re['url'], params=body_re['params'], json=body_re['json'])
 
     return {
         'code': response.status_code,
@@ -128,4 +123,4 @@ def acrality_control(connect):
 
 def print_status(time_start, text):
     if config.print_status:
-        print(text + " : " + str(int(time.time() - time_start)))
+        print(text + " : " + adt.calculate_time(time_start))

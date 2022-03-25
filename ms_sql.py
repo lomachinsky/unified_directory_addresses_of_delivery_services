@@ -1,15 +1,6 @@
 import pyodbc
 
 
-def get_connect_str():
-    return {
-        'type': 'MSQL',
-        'server': '127.0.0.1',
-        'username': 'sa',
-        'password': '82371'
-    }
-
-
 def get_create_script_table(table_name):
 
     if table_name == "task_list":
