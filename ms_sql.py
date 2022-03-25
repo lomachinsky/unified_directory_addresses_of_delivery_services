@@ -1,5 +1,4 @@
 import pyodbc
-from threading import Thread
 
 
 def get_connect_str():
@@ -9,6 +8,7 @@ def get_connect_str():
         'username': 'sa',
         'password': '82371'
     }
+
 
 def get_create_script_table(table_name):
 
