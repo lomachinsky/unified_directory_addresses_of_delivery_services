@@ -5,7 +5,7 @@ from datetime import datetime as dtm
 from datetime import timedelta as tdm
 import odbc
 import config
-import odbcd.ms_sql as mssql
+import ms_sql as mssql
 import time
 
 

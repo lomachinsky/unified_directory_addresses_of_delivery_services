@@ -1,5 +1,5 @@
 import requests
-import odbcd.ms_sql as mssql
+import ms_sql as mssql
 from datetime import datetime, timedelta
 import json
 
